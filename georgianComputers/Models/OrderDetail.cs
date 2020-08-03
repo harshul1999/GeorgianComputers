@@ -13,6 +13,7 @@ namespace georgianComputers.Models
         public int ProductId { get; set; }
         public int Quantity { get; set; }
         [Column(TypeName = "decimal(10, 2)")]
+        [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Price { get; set; }
 
         [ForeignKey(nameof(OrderId))]

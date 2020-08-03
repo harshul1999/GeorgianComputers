@@ -32,10 +32,6 @@ namespace georgianComputers
         services.AddDbContext<GeorgianComputersContext>(options =>
                             options.UseSqlServer(
                                 Configuration.GetConnectionString("DefaultConnection")));
-            //Configure Identity to work with out DBase
-            //USe our new AppliactionRole class to manage Roles and permissions
-            //point Identity to the existing GeorgianComputer DBase Context Class
-            //Use default cookei settings
             services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddDefaultUI()
                 .AddRoles<ApplicationRole>()

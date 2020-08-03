@@ -20,6 +20,7 @@ namespace georgianComputers.Models
         [StringLength(100)]
         public string UserId { get; set; }
         [Column(TypeName = "decimal(10, 2)")]
+        [DisplayFormat(DataFormatString = "{0:c}")]
         public decimal Total { get; set; }
         [Required]
         [StringLength(50)]
